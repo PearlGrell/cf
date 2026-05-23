@@ -1,0 +1,22 @@
+[Unit]
+Description=Competitive Programming Contest Management Agent Service
+After=network.target
+
+[Service]
+Type=simple
+User=node
+WorkingDirectory=/opt/cf_agent
+ExecStart=/usr/bin/npm start
+Restart=always
+RestartSec=10
+
+# Load environment configuration
+EnvironmentFile=/opt/cf_agent/.env
+
+# Standard output and error routing to journald
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=cf-agent
+
+[Install]
+WantedBy=multi-user.target

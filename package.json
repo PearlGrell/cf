@@ -1,0 +1,35 @@
+{
+  "name": "cf-contest-agent",
+  "version": "1.0.0",
+  "description": "Autonomous Self-Hosted CP Contest Management Agent with Google Tasks Integration",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node src/index.js",
+    "oauth": "node scripts/setup-oauth.js",
+    "test": "vitest run",
+    "test:mock": "node scripts/test-agent.js"
+  },
+  "keywords": [
+    "codeforces",
+    "google-tasks",
+    "contest-tracker",
+    "automation",
+    "self-hosted"
+  ],
+  "author": "Antigravity",
+  "license": "MIT",
+  "dependencies": {
+    "@libsql/client": "^0.6.2",
+    "croner": "^8.0.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "googleapis": "^137.0.0",
+    "winston": "^3.13.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "vitest": "^1.6.0"
+  }
+}
