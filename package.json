@@ -21,7 +21,7 @@
   "author": "Antigravity",
   "license": "MIT",
   "dependencies": {
-    "@libsql/client": "^0.6.2",
+    "@libsql/client": "^0.17.3",
     "croner": "^8.0.2",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",

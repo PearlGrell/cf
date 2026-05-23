@@ -5,8 +5,8 @@ dotenv.config();
 
 export const settings = {
   CF_HANDLE: process.env.CF_HANDLE || '',
-  DATABASE_URL: process.env.DATABASE_URL || 'file:data/cf_agent.db',
-  DATABASE_AUTH_TOKEN: process.env.DATABASE_AUTH_TOKEN || '',
+  DATABASE_URL: process.env.DATABASE_URL || process.env.TURSO_DATABASE_URL || 'file:data/cf_agent.db',
+  DATABASE_AUTH_TOKEN: process.env.DATABASE_AUTH_TOKEN || process.env.TURSO_AUTH_TOKEN || '',
   GOOGLE_TASKLIST_ID: process.env.GOOGLE_TASKLIST_ID || '@default',
   GOOGLE_CREDENTIALS_PATH: process.env.GOOGLE_CREDENTIALS_PATH || 'data/credentials.json',
   GOOGLE_CREDENTIALS_JSON: process.env.GOOGLE_CREDENTIALS_JSON || '',
