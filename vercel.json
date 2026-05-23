@@ -1,16 +1,8 @@
 {
   "crons": [
     {
-      "path": "/api/upcoming",
-      "schedule": "*/15 * * * *"
-    },
-    {
-      "path": "/api/live",
-      "schedule": "*/5 * * * *"
-    },
-    {
-      "path": "/api/cleanup",
-      "schedule": "*/30 * * * *"
+      "path": "/api/sync",
+      "schedule": "0 0 * * *"
     }
   ]
 }
